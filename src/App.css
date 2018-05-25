@@ -1,0 +1,95 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-images {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.App-images article {
+  max-width: 300px;
+  padding: 0.5em;
+  background-color: #cdbffb;
+  border: 1px solid #6e46f4;
+  margin: 0.5em;
+}
+
+.App-images img {
+  max-width: 300px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body, input {
+  font: caption;
+}
+
+input {
+  padding: 0.5em;
+  border: 1px solid #5b2ef3;
+  background-color: #cdbffb;
+}
+
+button, .button, input[type=submit] {
+  background-color: #5b2ef3;
+  border: 1px solid #3d0de1;
+  color: white;
+  padding: 0.5em;
+}
+button:hover, .button:hover, input[type=submit]:hover {
+  background-color: #815ef6;
+}
+button:active, .button:active, input[type=submit]:active {
+  background-color: #6e46f4;
+}
+button.full-width, .button.full-width, input[type=submit].full-width {
+  width: 100%;
+  margin: 1em 0;
+}
+button.secondary, .button.secondary, input[type=submit].secondary {
+  background-color: #f2effe;
+  border-color: #5b2ef3;
+  color: #5b2ef3;
+}
+button.delete, .button.delete, input[type=submit].delete {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  padding: 0 0.5em;
+}
+
+.NewItem {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 500px;
+}
+
+.NewItem-input {
+  width: 100%;
+}
