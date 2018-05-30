@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { Storage } from 'aws-amplify';
-import './App.css';
+import './Application.css';
 
-class App extends Component {
+class Application extends Component {
   state = {
     files: []
   };
@@ -18,7 +17,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="Application">
         <form className="NewItem" onSubmit={this.handleSubmit}>
           <input
             type="file"
@@ -26,9 +25,12 @@ class App extends Component {
           />
           <input className="full-width" type="submit" />
         </form>
+        <section className="Application-images">
+
+        </section>
       </div>
     );
   }
 }
 
-export default App;
+export default Application;
