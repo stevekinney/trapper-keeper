@@ -1,10 +1,18 @@
-import React, { Component } from 'react';
-import './Application.css';
+import React, { Component } from "react";
+import "./Application.css";
+
+import { Storage } from "aws-amplify";
 
 class Application extends Component {
   state = {
     files: []
   };
+
+  componentDidMount() {
+    Storage.list("").then(files => {
+      console.log({ files });
+    });
+  }
 
   handleSubmit = event => {
     event.preventDefault();
@@ -19,15 +27,10 @@ class Application extends Component {
     return (
       <div className="Application">
         <form className="NewItem" onSubmit={this.handleSubmit}>
-          <input
-            type="file"
-            ref={input => this.fileInput = input}
-          />
+          <input type="file" ref={input => (this.fileInput = input)} />
           <input className="full-width" type="submit" />
         </form>
-        <section className="Application-images">
-
-        </section>
+        <section className="Application-images" />
       </div>
     );
   }
