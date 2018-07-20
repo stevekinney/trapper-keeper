@@ -1,14 +1,17 @@
 import React, { Component } from "react";
 import "./Application.css";
 
+import { withAuthenticator } from "aws-amplify-react";
 import { Storage } from "aws-amplify";
+
+Storage.configure({ level: "private" });
 
 class S3Image extends Component {
   state = { src: null };
 
   async componentDidMount() {
     const { s3key } = this.props;
-    const src = await Storage.get(s3key);
+    const src = await Storage.get(s3key, { expires: 10 });
     this.setState({ src });
   }
 
@@ -62,4 +65,4 @@ class Application extends Component {
   }
 }
 
-export default Application;
+export default withAuthenticator(Application);
